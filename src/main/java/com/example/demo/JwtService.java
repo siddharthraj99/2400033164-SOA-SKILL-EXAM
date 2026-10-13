@@ -24,7 +24,7 @@ public class JwtService {
         this.expirationMs = expirationMs;
     }
 
-    /** Creates a signed JWT containing the username and an expiry time. */
+   
     public String generateToken(String username) {
         Date now = new Date();
         return Jwts.builder()
@@ -35,10 +35,7 @@ public class JwtService {
                 .compact();
     }
 
-    /**
-     * Verifies signature and expiry. Returns the username if valid,
-     * or null if the token is invalid/expired/tampered.
-     */
+   
     public String validateAndGetUsername(String token) {
         try {
             return Jwts.parser()
