@@ -36,7 +36,7 @@ public class SecurityConfig {
         return http.build();
     }
 
-    /** Empty user store: stops Spring Boot from generating a random default password. */
+
     @Bean
     public UserDetailsService userDetailsService() {
         return new InMemoryUserDetailsManager();
