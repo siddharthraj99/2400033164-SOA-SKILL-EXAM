@@ -13,11 +13,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Runs once per request. If a valid Bearer token is present, marks the
- * request as authenticated. Otherwise leaves it unauthenticated, and
- * Spring Security answers with 401.
- */
 public class JwtAuthFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
